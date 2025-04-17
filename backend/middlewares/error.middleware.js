@@ -1,9 +1,6 @@
 
 
 const errorHandler = (err, req, res, next) => {
-    // console.error(err.stack);
-    // const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
-
     // Use the status code from the error or default to 500
     let statusCode = err.statusCode || 500; 
     // Use the message from the error or default to a generic message
