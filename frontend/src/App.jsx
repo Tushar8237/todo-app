@@ -1,12 +1,14 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
+import AppRouter from "./routes/AppRouter";
 
+
+// Main App component that wraps the application with a Navbar and Router
 function App() {
   return (
-    <div>
-      <h1>TODO APP</h1>
-      <button className="bg-green-500 hover:bg-green-600 font-bold p-8 text-2xl focus:outline-none">
-        Click Me
-      </button>
+    <div className="min-h-screen bg-gray-100 text-gray-800 font-sans">
+      <Navbar />
+      <AppRouter />
     </div>
   );
 }
