@@ -10,8 +10,7 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { user } = useSelector((state) => state.auth);
-    // const user = true
-
+    
     const handleLogout = () => {
         dispatch(logout());
         navigate("/login");
@@ -25,10 +24,10 @@ const Navbar = () => {
 
             {user ? (
                 <div className="flex gap-4 items-center">
-                    <span className="hidden sm:inline text-gray-600">👋 {user.name}</span>
+                    <span className="hidden sm:inline text-gray-600">👋 {user.user.name}</span>
                     <button
                         onClick={handleLogout}
-                        className="bg-blue-600 text-white px-4 py-1.5 rounded hover:bg-blue-700 transition text-sm"
+                        className="bg-blue-600 cursor-pointer text-white px-4 py-1.5 rounded hover:bg-blue-700 transition text-sm"
                     >
                         Logout
                     </button>

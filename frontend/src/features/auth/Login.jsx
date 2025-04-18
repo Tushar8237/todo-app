@@ -14,9 +14,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user, error, loading } = useSelector((state) => state.auth);
-
-  // console.log(user)
-
+  
   const onSubmit = (data) => {
     dispatch(login(data));
   };

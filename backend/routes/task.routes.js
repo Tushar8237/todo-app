@@ -9,7 +9,7 @@ const router = express.Router();
 router.use(authMiddleware)
 
 // Create new task
-router.post('/', createTask);
+router.post('/add', createTask);
 
 // Get tasks with filters, search and pagination
 router.get('/', getTasks);
